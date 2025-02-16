@@ -32,7 +32,7 @@ const ChatArea = ({ selectedGroup, socket }) => {
   const fetchMessages = async () => {
     try {
       const { data } = await axios.get(
-        `http://localhost:3000/api/messages/${selectedGroup._id}`,
+        `https://mern-chat-app-rf6o.onrender.com/api/messages/${selectedGroup._id}`,
         {
           headers: {
             auth: `Bearer ${currentUser.token}`,
@@ -58,7 +58,7 @@ const ChatArea = ({ selectedGroup, socket }) => {
     try {
       const token = currentUser.token;
       const { data } = await axios.post(
-        `http://localhost:3000/api/messages`,
+        `https://mern-chat-app-rf6o.onrender.com/api/messages`,
         {
           group: selectedGroup?._id,
           content: newMessage,

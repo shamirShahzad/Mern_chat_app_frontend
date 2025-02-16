@@ -24,7 +24,7 @@ const Login = () => {
     setLoading(true);
     try {
       const { data } = await axios.post(
-        "http://localhost:3000/api/users/login",
+        "https://mern-chat-app-rf6o.onrender.com/api/users/login",
         {
           email,
           password,

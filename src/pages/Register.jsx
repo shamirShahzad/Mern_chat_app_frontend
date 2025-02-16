@@ -24,11 +24,14 @@ const Register = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const { data } = axios.post("http://localhost:3000/api/users/register", {
-        email,
-        password,
-        username,
-      });
+      const { data } = axios.post(
+        "https://mern-chat-app-rf6o.onrender.com/api/users/register",
+        {
+          email,
+          password,
+          username,
+        }
+      );
       navigate("/login");
     } catch (err) {
       toast({
